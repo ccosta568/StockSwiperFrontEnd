@@ -1,0 +1,26 @@
+:host, .app {
+	display: block;
+	min-height: 100dvh;
+	background: #0b1020;
+	color: #e5e7eb;
+}
+
+.topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px;
+	border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.topbar h1 { margin: 0; font-size: 1.25rem; }
+.topbar .right { display: flex; gap: 12px; align-items: center; color: #a3a3a3; font-size: .9rem; }
+.topbar .counter { background: rgba(59,130,246,.15); color: #93c5fd; padding: 4px 8px; border-radius: 999px; }
+
+.content { max-width: 640px; margin: 0 auto; padding: 24px 16px; }
+.center { text-align: center; margin-top: 20vh; }
+.primary { background: #2563eb; color: white; border: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; }
+
+.deck { display: grid; gap: 16px; }
+.helper { text-align: center; color: #9ca3af; }
+
+app-stock-card .card { background: #0f172a; color: #e5e7eb; }

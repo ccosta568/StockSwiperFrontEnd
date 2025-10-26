@@ -57,7 +57,8 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "outputMode": "static"
             }
           },
           "defaultConfiguration": "production"
@@ -69,7 +70,8 @@
               "buildTarget": "stockswiper:build:production"
             },
             "development": {
-              "buildTarget": "stockswiper:build:development"
+              "buildTarget": "stockswiper:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -99,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,0 +1,35 @@
+.card {
+  position: relative;
+  background: #fff;
+  color: #111;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  user-select: none;
+  touch-action: pan-y;
+  transition: transform 0.2s ease-out;
+}
+.card.dragging { transition: none; }
+
+.badge {
+  position: absolute;
+  top: 12px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  pointer-events: none;
+}
+.badge.like { left: 12px; background: rgba(16,185,129,0.15); color: #047857; }
+.badge.nope { right: 12px; background: rgba(239,68,68,0.15); color: #991b1b; }
+
+.header { display: flex; align-items: baseline; gap: 8px; }
+.symbol { font-size: 1.25rem; font-weight: 700; }
+.name { font-size: 1rem; color: #555; }
+.meta { display: flex; justify-content: space-between; margin-top: 6px; color: #666; }
+.yield { margin-top: 8px; }
+.yield.good { color: #047857; font-weight: 600; }
+.desc { margin-top: 12px; color: #444; display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.actions { display: flex; justify-content: space-between; margin-top: 16px; }
+.btn { font-size: 1.5rem; padding: 8px 14px; border-radius: 999px; border: none; cursor: pointer; }
+.btn.nope { background: #fee2e2; }
+.btn.like { background: #d1fae5; }

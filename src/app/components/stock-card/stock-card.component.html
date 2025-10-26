@@ -1,0 +1,27 @@
+<div class="card"
+     (pointerdown)="onPointerDown($event)"
+     (pointermove)="onPointerMove($event)"
+     (pointerup)="onPointerUp($event)"
+     [style.transform]="transform"
+     [class.dragging]="dragging()">
+  <div class="badge like" [style.opacity]="likeOpacity">❤️ Like</div>
+  <div class="badge nope" [style.opacity]="nopeOpacity">✖️ Nope</div>
+
+  <div class="header">
+    <div class="symbol">{{ stock.symbol }}</div>
+    <div class="name">{{ stock.name }}</div>
+  </div>
+  <div class="meta">
+    <span class="sector">{{ stock.sector }}</span>
+    <span class="price">${{ stock.price | number:'1.0-2' }}</span>
+  </div>
+  <div class="yield" [class.good]="stock.dividendYield > 0.02">
+    Dividend Yield: {{ (stock.dividendYield * 100) | number:'1.0-2' }}%
+  </div>
+  <p class="desc">{{ stock.description }}</p>
+
+  <div class="actions">
+    <button type="button" class="btn nope" (click)="dislike()">✖️</button>
+    <button type="button" class="btn like" (click)="like()">❤️</button>
+  </div>
+</div>
